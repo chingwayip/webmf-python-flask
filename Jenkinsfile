@@ -8,14 +8,6 @@ pipeline {
         }
       }
     }
-    stage('build2') {
-      steps {
-      	script {
-          dockerImage = docker.build("${env.DOCKER_IMAGE_TAG}",  '-f ./Dockerfile .')
-          pipelineContext.dockerImage = dockerImage
-        }
-      }
-    }
     stage('test') {
       steps {
         withEnv(["HOME=${env.WORKSPACE}"]) {
