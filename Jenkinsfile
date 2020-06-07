@@ -9,9 +9,11 @@ pipeline {
       }
     }
     stage('build2') {
-      script {
-        dockerImage = docker.build("${env.DOCKER_IMAGE_TAG}",  '-f ./Dockerfile .')
-        pipelineContext.dockerImage = dockerImage
+      steps {
+      	script {
+          dockerImage = docker.build("${env.DOCKER_IMAGE_TAG}",  '-f ./Dockerfile .')
+          pipelineContext.dockerImage = dockerImage
+        }
       }
     }
     stage('test') {
