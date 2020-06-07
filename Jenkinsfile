@@ -14,8 +14,8 @@ pipeline {
           sh 'python test.py'
         }
       }
-      post {
-        always {
+    post {
+      always {
           junit 'test-reports/*.xml'
         }
       }              
