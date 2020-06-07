@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import unittest
 import sys
+import os
 sys.path.append(os.environ['WORKSPACE'])
 import app
 '''
