@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import unittest
-#import app
+sys.path.append(os.environ['WORKSPACE'])
+import app
 '''
  File "/var/jenkins_home/workspace/webmf-python-flask/app.py", line 2, in <module>
     from flask import Flask
