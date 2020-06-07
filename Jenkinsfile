@@ -21,7 +21,7 @@ pipeline {
       }              
     }
     stage('Build docker image') {
-      sh "docker build -t webmf-python-flask-app ."
+      sh "docker build . -t webmf-python-flask-app"
     }
   }
 }
