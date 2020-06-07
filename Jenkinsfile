@@ -14,9 +14,6 @@ pipeline {
           sh 'python test.py'
         }
       }
-    stage('Build docker image') {
-      sh "docker build . -t webmf-python-flask-app"
-    }
     post {
       always {
           junit 'test-reports/*.xml'
