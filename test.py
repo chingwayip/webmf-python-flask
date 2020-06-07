@@ -1,14 +1,6 @@
 #!/usr/bin/env python
 import unittest
-import sys
-import os
-sys.path.append(os.environ['WORKSPACE'])
 import app
-'''
- File "/var/jenkins_home/workspace/webmf-python-flask/app.py", line 2, in <module>
-    from flask import Flask
-ModuleNotFoundError: No module named 'flask'
-'''
 
 class TestHello(unittest.TestCase):
 
